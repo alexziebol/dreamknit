@@ -41,14 +41,62 @@
             <div class="jumbotron">
                 <h1>dreamknit</h1>
                 <p class="lead">Submit &amp; search possible meanings behind your dreams! Crowdsourced!</p>
-                <p><a class="btn btn-lg btn-success btn-init" href="#">Let's do it!</a></p>
+                <p><a class="btn btn-lg btn-success btn-init" href="javascript:;">Let's do it!</a></p>
             </div>
 
-            <div class="row marketing main-submission">
+            <div class="row marketing" id="main-container">
                 <div class="col-lg-12">
                     <h3>Submit</h3>
 
-                    <form class="form-horizontal main-submission-form" role="form">
+                    <form class="form-horizontal" id="main-submission-form" role="form" method="post" action="submit.php">
+                      <div class="form-group">
+                        <label for="inputObject" class="col-sm-2 control-label">Object</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="object" id="inputObject" placeholder="Object">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputFeeling" class="col-sm-2 control-label">Recent Attitude</label>
+                        <div class="col-sm-10 recent-attitude">
+                          <select class="form-control" name="attitude" id="inputFeeling">
+                              <option value="not-selected">-Attitude-</option>
+                              <option value="arrogant">Arrogant</option>
+                              <option value="anxious">Anxious</option>
+                              <option value="collaborative">Collaborative</option>
+                              <option value="considerate">Considerate</option>
+                              <option value="curious">Curious</option>
+                              <option value="creative">Creative</option>
+                              <option value="critical">Critical</option>
+                              <option value="defiant">Defiant</option>
+                              <option value="humorous">Humorous</option>
+                              <option value="impatient">Impatient</option>
+                              <option value="independent">Independent</option>
+                              <option value="patient">Patient</option>
+                              <option value="productive">Productive</option>
+                              <option value="risky">Risky</option>
+                              <option value="selfcentered">Self-centered</option>
+                              <option value="trustful">Trustful</option>
+                            </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputObject" class="col-sm-2 control-label">Description</label>
+                        <div class="col-sm-10">
+                          <textarea class="form-control" name="description" rows="3"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                      </div>
+                    </form>
+
+                    <hr>
+
+                    <h3>Search</h3>
+
+                    <form class="form-horizontal" id="main-search-form" role="form">
                       <div class="form-group">
                         <label for="inputObject" class="col-sm-2 control-label">Object</label>
                         <div class="col-sm-10">
@@ -56,20 +104,32 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="inputFeeling" class="col-sm-2 control-label">Feeling</label>
-                        <div class="col-sm-10">
+                        <label for="inputFeeling" class="col-sm-2 control-label">Recent Attitude</label>
+                        <div class="col-sm-10 recent-attitude">
                           <select class="form-control" id="inputFeeling">
-                              <option value="not-selected">-Feeling</option>
-                              <option value="happy">Happy</option>
-                              <option value="neutral">Neutral</option>
-                              <option value="sad">Sad</option>
+                              <option value="not-selected">-Attitude-</option>
+                              <option value="arrogant">Arrogant</option>
                               <option value="anxious">Anxious</option>
+                              <option value="collaborative">Collaborative</option>
+                              <option value="considerate">Considerate</option>
+                              <option value="curious">Curious</option>
+                              <option value="creative">Creative</option>
+                              <option value="critical">Critical</option>
+                              <option value="defiant">Defiant</option>
+                              <option value="humorous">Humorous</option>
+                              <option value="impatient">Impatient</option>
+                              <option value="independent">Independent</option>
+                              <option value="patient">Patient</option>
+                              <option value="productive">Productive</option>
+                              <option value="risky">Risky</option>
+                              <option value="selfcentered">Self-centered</option>
+                              <option value="trustful">Trustful</option>
                             </select>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                          <button type="submit" class="btn btn-default">Submit</button>
+                          <button type="submit" class="btn btn-primary">Search</button>
                         </div>
                       </div>
                     </form>
@@ -86,7 +146,7 @@
                     <p>I'm hoping that specific objects found in dreams can be tied to specific mental states and environmental situations.</p>
 
                     <h4>Why was this made?</h4>
-                    <p>I started this as a mini-project to practice my Javascript, PHP and mySQL! I will slowly add functionalities as I learn the languages.</p>
+                    <p>I started this as a mini-project to practice Javascript, PHP and mySQL! I will slowly add functionalities as I learn the languages.</p>
 
                 </div>
             </div>

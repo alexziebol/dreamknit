@@ -13,7 +13,13 @@ try {
 catch(PDOException $e) {
     echo $e->getMessage();
 }
- 
-echo "it works";
+
+$object = $_POST['object'];
+$attitude = $_POST['attitude'];
+$description = $_POST['description'];
+
+echo $object;
+echo $attitude;
+echo $description;
 
 ?>

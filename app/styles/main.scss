@@ -23,12 +23,16 @@ body {
     padding-right: 15px;
 }
 
-.main-submission {
+#main-container {
     display:none;
 }
 
-.main-submission-form {
+#main-submission-form, #main-search-form {
     padding-top:20px;
+}
+
+.recent-attitude {
+    padding-top:10px;
 }
 
 /* Custom page header */
