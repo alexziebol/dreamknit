@@ -7,7 +7,7 @@ $username = 'root'; // username
 $password = 'root'; // password
 
 // Get values from form and assign to variables
-$object = $_POST['object'];
+$object = strtolower($_POST['object']);
 $attitude = $_POST['attitude'];
 $description = $_POST['description'];
 
