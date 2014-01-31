@@ -17,7 +17,7 @@ echo 'Connection failed: ' . $e->getMessage();
 
 
 // Check user input from form & assign input to variable
-$object = str_replace(array('%','_'),'',$_POST['search_object']);
+$object = str_replace(array('%','_'),'',$_GET['search_object']);
 if (!$object)
 {
     exit('Invalid form value: '.$object);
@@ -37,8 +37,8 @@ print("Fetch all of the remaining rows in the result set:\n");
  $result = $stmt->fetchAll();
 
 foreach( $result as $row ) {
-    echo $row["attitude"];
-    echo $row["description"];
+    print $row["attitude"];
+    print $row["description"];
 }
 
 ?>

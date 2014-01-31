@@ -11,6 +11,7 @@ $(document).ready(function(){
 		});
 	});
 
+	// Submit AJAX
     $(function () {
         $('#main-submission-form').on('submit', function(e) {
             $.ajax({
@@ -25,5 +26,21 @@ $(document).ready(function(){
             e.preventDefault();
         });
     });
+
+    // Search AJAX
+    $(function () {
+        $('#main-search-form').on('submit', function(e) {
+            $.ajax({
+                type: 'get',
+                url: 'search.php',
+                data: $(this).serialize(),
+                success: function (resp) {
+                    $('.search-result').html(resp).show().animate({'opacity':'1'}, 2000);
+                }
+            });
+            e.preventDefault();
+        });
+    });
+
 
 });
